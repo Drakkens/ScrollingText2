@@ -14,27 +14,33 @@
             android:textStyle="bold"
             android:text="@string/article_title" />
 
-    <TextView
-            android:id="@+id/article_subheading"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/article_heading"
-            android:padding="@dimen/padding_regular"
-            android:textAppearance="@android:style/TextAppearance"
-            android:text="@string/article_subtitle" />
 
     <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/article_subheading">
+            android:layout_below="@id/article_heading">
 
-        <TextView
-                android:id="@+id/article"
-                android:layout_width="wrap_content"
+        <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/article_text"
-                android:lineSpacingExtra="@dimen/line_spacing"
-                android:autoLink="web" />
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/article_subheading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_regular"
+                    android:textAppearance="@android:style/TextAppearance"
+                    android:text="@string/article_subtitle" />
+            <TextView
+                    android:id="@+id/article"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/article_text"
+                    android:lineSpacingExtra="@dimen/line_spacing"
+                    android:autoLink="web" />
+
+        </LinearLayout>
 
     </ScrollView>
 </RelativeLayout>
